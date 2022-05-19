@@ -12,6 +12,11 @@
 
 - 【暂停】[learn-netty](https://github.com/LawssssCat/learn-netty) - netty 学习笔记
 
+## Git
+
+- [git 配置文件 .gitattributes](./docs/Git/git_gitattributes.md)
+
 ## Github
 
-- [为个人profile页面添加描述](./docs/Github/github_profile.md)
+- [profile 页面添加描述](./docs/Github/github_profile.md)
+- [Github Pages 设置](./docs/Github/github_pages.md)
