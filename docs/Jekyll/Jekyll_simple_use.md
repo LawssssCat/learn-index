@@ -4,7 +4,6 @@ Jekyll是一款静态博客生成器，也是github page支持的后台引擎
 
 ### 在 windows 中安装 jekll
 
-
 1. 首先需要安装 ruby ：
 
     >ruby 是一个面向对象的脚本语言。
@@ -151,4 +150,71 @@ Jekyll是一款静态博客生成器，也是github page支持的后台引擎
     ```bash
     C:\Users\lawsssscat>jekyll -v
     jekyll 4.2.2
+    C:\Users\lawsssscat>bundle -v
+    Bundler version 2.3.14
     ```
+
+
+### 创建一个博客
+
+初始化
+
+```bash
+jekyll new ga_blog
+```
+
+```bash
+C:\Users\lawsssscat\Downloads\learn\learn-jekyll>jekyll new ga_blog
+Running bundle install in C:/Users/lawsssscat/Downloads/learn/learn-jekyll/ga_blog...
+  Bundler: Fetching gem metadata from https://rubygems.org/..........
+  Bundler: Resolving dependencies...
+  Bundler: Using bundler 2.3.14
+  Bundler: Using public_suffix 4.0.7
+  Bundler: Using colorator 1.1.0
+  Bundler: Using concurrent-ruby 1.1.10
+  Bundler: Using eventmachine 1.2.7
+  Bundler: Using http_parser.rb 0.8.0
+  Bundler: Using ffi 1.15.5 (x64-mingw-ucrt)
+  Bundler: Using forwardable-extended 2.6.0
+  Bundler: Using rb-fsevent 0.11.1
+  Bundler: Using rexml 3.2.5
+  Bundler: Using liquid 4.0.3
+  Bundler: Using mercenary 0.4.0
+  Bundler: Using rouge 3.28.0
+  Bundler: Using safe_yaml 1.0.5
+  Bundler: Using unicode-display_width 1.8.0
+  Bundler: Using addressable 2.8.0
+  Bundler: Using i18n 1.10.0
+  Bundler: Using terminal-table 2.0.0
+  Bundler: Using em-websocket 0.5.3
+  Bundler: Using sassc 2.4.0
+  Bundler: Using rb-inotify 0.10.1
+  Bundler: Using pathutil 0.16.2
+  Bundler: Using jekyll-sass-converter 2.2.0
+  Bundler: Using kramdown 2.4.0
+  Bundler: Using kramdown-parser-gfm 1.1.0
+  Bundler: Using listen 3.7.1
+  Bundler: Using jekyll-watch 2.2.1
+  Bundler: Using jekyll 4.2.2
+  Bundler: Fetching jekyll-feed 0.16.0
+  Bundler: Fetching jekyll-seo-tag 2.8.0
+  Bundler: Installing jekyll-feed 0.16.0
+  Bundler: Installing jekyll-seo-tag 2.8.0
+  Bundler: Fetching minima 2.5.1
+  Bundler: Installing minima 2.5.1
+  Bundler: Bundle complete! 7 Gemfile dependencies, 31 gems now installed.
+  Bundler: Use `bundle info [gemname]` to see where a bundled gem is installed.
+New jekyll site installed in C:/Users/lawsssscat/Downloads/learn/learn-jekyll/ga_blog.
+```
+
+>问题：Jekyll 运行的时候提示错误 cannot load such file -- webrick (LoadError)
+><http://www.manongjc.com/detail/26-nafjorgurgcyuyr.html>
+>```bash
+>bundle add webrick
+>```
+
+运行
+
+```bash
+bundle exec jekyll serve
+```
