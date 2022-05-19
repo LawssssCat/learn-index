@@ -24,3 +24,10 @@
     （Github内置支持的几个主题：<https://pages.github.com/themes/>，每个README.md里都有介绍如何设置）
 
     （更多更漂亮的主题：<http://jekyllthemes.org/>、<https://github.com/jekyll/jekyll/wiki/sites>（不要挑花眼了））
+
+    > 2022年5月20日
+    > 
+    >选中
+    >+ <https://jekyll-lin-theme.netlify.app/> - 框架
+    >+ <https://soyaine.github.io/jekyll-theme-diary/> - 日历
+    >+ <https://longpdo.github.io/> - 特效
