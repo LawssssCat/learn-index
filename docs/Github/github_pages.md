@@ -1,72 +1,26 @@
-官方介绍：<https://git-scm.com/docs/gitattributes>
+>官网 jekyll：<https://www.jekyll.com.cn/>
+>
+>参考：[《jekyll 的基本用法》](../Jekyll/Jekyll_simple_use.md)
 
-Git 的 .gitattributes 文件是一个文本文件，文件中的一行定义一个路径的若干个属性。
+1. 开启 Github Pages
 
-### 格式
+    repositories 》 选着要开启的仓库 》 settings 》 Pages 
 
-以行为单位设置一个路径下所有文件的属性
+    选择发布分支和目录
 
-```bash
-要匹配的文件模式 属性1 属性2 ...
-```
+    <img src="images/auto-20220519205126.png" witdh=100%/>
 
-“`#`” 为注释
+    + gh-pages branch 是项目新建一个分支命名为这个，使用这个分支来做站点内容。
+    + master branch 是使用主分支也是默认的，来作为站点内容。
+    + master branch/docs folder 是使用主分支的docs文件夹来作为站点内容。
+    + None 就是禁用Github Pages。
 
-### 属性状态
+2. 选择主题
 
-一行中，一个属性（以text属性为例）可能有4种状态：
+    选择好主题后，在发布目录下会多出一个文件 `_config.yml`，它是jekyll的全局配置文件，现在里面只有一句话 `theme: jekyll-theme-modernist`。
+    
+    （我们可以手动修改这个theme主题配置，网站就会应用不同的主题。）
 
-1. 设置text
+    （Github内置支持的几个主题：<https://pages.github.com/themes/>，每个README.md里都有介绍如何设置）
 
-2. 不设置-text
-
-3. 设置值text=string
-
-未声明，通常不出现该属性即可；但是为了覆盖其他文件中的声明，也可以!text
-
-### 文件示例
-
-```bash
-*               text=auto
-*.txt		text
-*.jpg		-text
-*.vcproj	text eol=crlf
-*.sh		text eol=lf
-*.py		eol=lf
-```
-
-说明：
-
-+ 第1行，对任何文件，设置 `text=auto`，表示文件的行尾自动转换。如果是文本文件，则在文件入Git库时，行尾自动转换为LF。如果已经在入Git库中的文件的行尾为CRLF，则该文件在入Git库时，不再转换为LF。
-
-+ 第2行，对于txt文件，标记为文本文件，并进行行尾规范化。
-
-+ 第3行，对于jpg文件，标记为非文本文件，不进行任何的行尾转换。
-
-+ 第4行，对于vcproj文件，标记为文本文件，在文件入Git库时进行规范化，即行尾为LF。但是在检出到工作目录时，行尾自动转换为CRLF。
-
-+ 第5行，对于sh文件，标记为文本文件，在文件入Git库时进行规范化，即行尾为LF。在检出到工作目录时，行尾也不会转换为CRLF（即保持LF）。
-
-+ 第6行，对于py文件，只针对工作目录中的文件，行尾为LF。
-
-### 优先级
-
-在一个Git库中可以有多个gitattributes文件。不同gitattributes文件中，属性设置的优先级(从高到低)：
-```bash
-$GIT_DIR/info/attributes文件
-$GIT_DIR/my_path/.gitattributes文件
-$GIT_DIR/.gitattributes文件
-```
-同一个gitattributes文件中，按照行的先后顺序，如果一个文件的某个属性被多次设置，则后序的设置优先
-
-### 统一的gitattributes文件
-
-也可以为所有Git库设置统一的gitattributes文件：
-
-```bash
-git config --get core.attributesFile
-git config --global --get core.attributesFile
-```
-
-
-更多参考：Git中文开发手册 <https://www.php.cn/manual/view/34943.html>
+    （更多更漂亮的主题：<http://jekyllthemes.org/>、<https://github.com/jekyll/jekyll/wiki/sites>（不要挑花眼了））

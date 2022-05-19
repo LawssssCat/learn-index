@@ -1,4 +1,4 @@
-# 笔记
+# 笔记/随笔
 
 放置我的学习笔记。
 
@@ -15,8 +15,18 @@
 ## Git
 
 - [git 配置文件 .gitattributes](./docs/Git/git_gitattributes.md)
+- 【未完】[git 配置文件 .gitmodules](./docs/Git/git_gitmodules.md)
 
 ## Github
 
 - [profile 页面添加描述](./docs/Github/github_profile.md)
-- [Github Pages 设置](./docs/Github/github_pages.md)
+- [Github Pages 设置](./docs/Github/github_pages.md) - 整合、自定义 Jekyll 
+
+## 博客
+
+Jekyll 
+
+ - [Jekyll 的基本使用](./docs/Jekyll/Jekyll_simple_use.md)
+
+idoc
+- 【待看】<https://github.com/jaywcjlove/handbook/blob/master/package.json>
