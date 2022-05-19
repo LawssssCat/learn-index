@@ -218,3 +218,31 @@ New jekyll site installed in C:/Users/lawsssscat/Downloads/learn/learn-jekyll/ga
 ```bash
 bundle exec jekyll serve
 ```
+
+
+### 可选功能
+
+#### # 评论功能
+
+选择Valine（一款快速、简洁且高效的无后端评论系统）。
+
+第三方评论系统有很多，常见的有以下几个：
+
++ ~~多说~~
++ ~~网易云跟帖~~
++ ~~畅言~~
++ Disqus
++ 来必力（LiveRe）
++ Valine
+
+首先多说和网易云跟帖已经倒下了，其次畅言需要备案，Disqus和LiveRe都是国外的，加载速度慢。 Valine注册和配置简单，访问速度快。所以选择Valine。
+
+#### #  访问量统计
+使用百度统计。
+
+#### #  自定义域名
+如果你不愿意使用GitHub Pages的访问地址（例如xxx.github.io），你可以在腾讯云或阿里云上购买自定义域名，并配置域名解析即可。
+
+~~我选择的是腾讯云。~~
+
+参考：[ssl 配置](../Network/ssl_config.md)
