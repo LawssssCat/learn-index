@@ -25,7 +25,7 @@
 前端
 
 - 【未完】[learn-JavaScript](./docs/JavaScript/javascript_simple.md)
-- [learn-ESLint](./docs/ESLint/ESLint%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.md) - ESLint 学习笔记
+- [learn-ESLint](./docs/ESLint/ESLint_learn_note.md) - ESLint 学习笔记 
 
 后端
 
@@ -38,6 +38,7 @@
 -->
 ![GitHub repo file count (custom path & file type)](https://shields-staging.herokuapp.com/github/directory-file-count/LawssssCat/learn-index/docs/Git?label=article&logo=Markdown&style=social&type=file)
 
+- [git - 资料整理](https://blog.csdn.net/LawssssCat/article/details/103386802) - 按功能归类常用命令行
 - [git 配置文件 .gitattributes](./docs/Git/git_gitattributes.md)
 - 【未完】[git 配置文件 .gitmodules](./docs/Git/git_gitmodules.md)
 

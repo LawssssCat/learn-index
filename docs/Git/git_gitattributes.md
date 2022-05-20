@@ -75,6 +75,8 @@ git config --global --get core.attributesFile
 
 #### # 检测 GitHub repository语言
 
+> 官方文档：<https://github.com/github/linguist/blob/master/docs/overrides.md>
+
 首先GitHub使用linguist library来检测你所上传的代码是用什么语言来写的。
 
 我们可以通过 `.gitattributes` 更改检测规则
@@ -97,3 +99,17 @@ e.g.
     ```bash
     Visualization/out/*.html linguist-vendored
     ```
+    ```bash
+    project-docs/* linguist-documentation
+    ```
+
+Git attribute	| Defined in	| Effect on file
+-- | --| --
+linguist-detectable	| [languages.yml](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)	| Included in stats, even if language's type is data or prose
+linguist-documentation	| [documentation.yml](https://github.com/github/linguist/blob/master/lib/linguist/documentation.yml)	| Excluded from stats
+linguist-generated	| [generated.rb](https://github.com/github/linguist/blob/master/lib/linguist/generated.rb)	| Excluded from stats, hidden in diffs
+linguist-language=name	| [languages.yml](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)	| Highlighted and classified as name
+linguist-vendored	| [vendor.yml](https://github.com/github/linguist/blob/master/lib/linguist/vendor.yml)	| Excluded from stats
+
+##### 问题：如何使 Github 仓库中的 languages 可见 Markdown ？
+解决：<https://github.com/mrhrifat/mrhrifat/discussions/4>

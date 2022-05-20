@@ -1,6 +1,5 @@
 > 官方文档：<https://docs.github.com/cn/actions/using-workflows>
 >
-> 视频：<https://www.bilibili.com/video/av69442934/>
 
 GitHub Action 是 GitHub 于 2018 年 10 月推出的一个 CI\CD 服务（持续集成和持续部署）。简单明了的说 就是你可以给你的代码仓库部署一系列自动化脚本，在你进行了提交/合并分支等操作后，自动执行脚本。
 
@@ -67,6 +66,10 @@ jobs:
 
 官方文档：<https://docs.github.com/cn/actions/using-workflows/workflow-syntax-for-github-actions>
 
+【todo】：details 
+
 > 参考：
+> + 视频：《github新功能actions全方位讲解》 - <https://www.bilibili.com/video/av69442934/>
+> + 知乎：《GitHub Actions 自动发布 React 应用到 GitHub Pages》 - <https://zhuanlan.zhihu.com/p/371824341>
 > + 《GitHub Actions Advent Calendar》 - <https://www.edwardthomson.com/blog/github_actions_advent_calendar.html>
 > + 翻译：《GitHub Actions Advent Calendar》 - <https://qiwihui.com/qiwihui-blog-83/>
