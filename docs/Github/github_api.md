@@ -124,6 +124,7 @@ e.g.
 >:star: shields 官网：<https://shields.io/>
 >
 > 其他
+>+ :star: <https://shields-staging.herokuapp.com/category/size> - shields.io 有的 api 不生效时，试试这个
 >+ forthebadge 官网：<https://forthebadge.com/>
 
 GitHub徽标，GitHub Badge，你也可以叫它徽章。就是在项目README中经常看到的那些表明构建状态或者版本等信息的小图标。
@@ -203,7 +204,7 @@ e.g.
 
 ![](https://img.shields.io/badge/dynamic/json?color=brightgreen&label=repo%20size&query=size&url=https%3A%2F%2Fapi.github.com%2Frepos%2FLawssssCat%2Flearn-index)
 
-### 连接链接
+### 链接转跳
 
 markdown允许嵌套
 
