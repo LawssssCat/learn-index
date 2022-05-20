@@ -12,7 +12,16 @@ devops
 
 CI/CD（持续集成/持续交付）
 
-code -> github -> 构建/测试/部署
+
++ 持续集成
+    
+    所谓持续集成是站在代码层面的。程序员编写好代码，提交代码后，定义一系列脚本将提交的代码合并起来，等待构建成可执行的项目。
+
++ 持续交付
+
+    所谓持续交付是是站在项目层面的。搜集到已整合的代码后，就是将这些代码构建成可执行的项目。这时候定义一系列脚本，进行最后代码测试任务、项目构建任务、项目部署任务。
+
+code -> github -> 测试/构建/部署
 
 <img src="images/auto-cicd_simple_introduction-20220520163734.png" width=80%/>
 
@@ -169,3 +178,48 @@ Jenkins 的所有重要数据都存放在它的主目录中，即 `JENKINS_HOME`
 + `updates`：存放可用的插件更新
 + `userContent`：存放用户自己为 jenkins 服务器定制化的一些内容
 + `war`：存放扩展的 web 应用程序，当以单机应用程序的形式运行 jenkins 时，会把 web 应用程序解压到这个目录。
+
+## Travis
+
+官网：<https://www.travis-ci.org/>
+
+github的好基友
+
+注册一个 Travis 账户（实际上用Github第三方登录一步完成）
+
+这里以nodejs项目为例
+
+```bash
+npm init -y
+```
+
+```bash
+把 package.json 中
+"test": "echo \"Error: no test specified\" && exit 1"
+改成（打印日志，不退出）
+"test": "echo \"Error: no test specified\""
+```
+
+创建文件 `.travis.yml`
+
+```bash
+language: nodejs
+
+before_script:
+    - npm install
+
+script:
+    - npm test
+```
+
+把项目提交到 github，回到 Travis 后把新创建的这个仓库添加管理，然后就能看到 Travis 开始自动构建了，构建过程中会执行 befor_script、 script 脚本。
+
+## daocloud
+
+官网：<https://www.daocloud.io>
+
+上面两个介绍的 Jenkins 和 Travis 完成的是持续集成的功能，而 daocloud 完成的是持续交付的功能。
+
+daocloud 可以完成测试（已整合的）代码、构建项目、（简单的）集群管理、项目集群部署（发布）
+
+具体操作（视频）：<https://www.bilibili.com/video/av60120198>

@@ -65,7 +65,7 @@ idoc
 
 ## CI/CD
 
-- [CI/CD 介绍](./docs/CICD/cicd_simple_introduction.md)
+- [CI/CD 介绍](./docs/CICD/cicd_simple_introduction.md) - Jenkins、Travis、daocloud
 
 ## 网络
 
