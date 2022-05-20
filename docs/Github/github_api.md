@@ -191,6 +191,12 @@ e.g.
 > shields.io 官网上提供了生成上面链接的工具
 ><img src="images/auto-20220520113604.png" witdh=100%/>
 
+> 其中的 query 需要我们填写 jsonpath
+> 
+> jsonpath 的编写格式参考：https://jsonpath.com/
+> 
+> ![](https://img.shields.io/badge/dynamic/json?style=social&logo=Markdown&label=files&query=%24.length&url=https%3A%2F%2Fapi.github.com%2Frepos%2FLawssssCat%2Flearn-index%2Fcontents%2Fdocs%2FGithub)
+
 结果：
 
 `![](https://img.shields.io/badge/dynamic/json?color=brightgreen&label=repo%20size&query=size&url=https%3A%2F%2Fapi.github.com%2Frepos%2FLawssssCat%2Flearn-index)`
