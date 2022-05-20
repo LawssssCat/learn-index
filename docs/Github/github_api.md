@@ -125,6 +125,7 @@ e.g.
 >
 > 其他
 >+ :star: <https://shields-staging.herokuapp.com/category/size> - shields.io 有的 api 不生效时，试试这个
+>   >问题：<https://github.com/badges/shields/issues/5967>
 >+ forthebadge 官网：<https://forthebadge.com/>
 
 GitHub徽标，GitHub Badge，你也可以叫它徽章。就是在项目README中经常看到的那些表明构建状态或者版本等信息的小图标。
