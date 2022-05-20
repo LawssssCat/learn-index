@@ -633,4 +633,6 @@ module.exports = {
 > 参考：
 >1. 《【一听就懂】ESLint机制浅析-整体机制与规范包》 - <https://juejin.cn/post/7037426216671903780>
 >2. 《vscode配置eslint》 - <https://juejin.cn/post/7036556241664999455>
+>3. 视频：【一听就懂】ESLint详解
+ - <https://www.bilibili.com/video/BV1Eg411P7gr>
 >3. :star: 《VSCode-ESLint设置》 - <http://t.zoukankan.com/ingstyle-p-12918525.html>
