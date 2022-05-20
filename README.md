@@ -6,6 +6,7 @@
 
 前端
 
+- 【未完】[learn-JavaScript](./docs/JavaScript/javascript_simple.md)
 - [learn-ESLint](./docs/ESLint/ESLint%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.md) - ESLint 学习笔记
 
 后端
@@ -19,8 +20,10 @@
 
 ## Github
 
-- [profile 页面添加描述](./docs/Github/github_profile.md)
+- [Github profile 页面](./docs/Github/github_profile.md)
 - [Github Pages 设置](./docs/Github/github_pages.md) - 整合、自定义 Jekyll 
+- [GitHub Actions 设置](./docs/Github/github_actions.md)
+- [Github API](./docs/Github/github_api.md)
 
 ## 博客
 
