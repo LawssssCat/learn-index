@@ -70,3 +70,30 @@ git config --global --get core.attributesFile
 
 
 更多参考：Git中文开发手册 <https://www.php.cn/manual/view/34943.html>
+
+### 其他
+
+#### # 检测 GitHub repository语言
+
+首先GitHub使用linguist library来检测你所上传的代码是用什么语言来写的。
+
+我们可以通过 `.gitattributes` 更改检测规则
+
+e.g. 
+
+1. 使用linguist-language进行语言转换
+    
+    ```bash
+    *.css linguist-language=PHP // 把css 改成 PHP语言
+	.rb linguist-language=Java
+    ```
+2. 要对整个语言进行启用和弃用
+    ```bash
+    *.md linguist-detectable=true
+    *.sql linguist-detectable=false//弃用SQl语言统计
+    *.html linguist-detectable=true//启用html语言统计
+    ```
+3. 要对部分文件夹进行不统计
+    ```bash
+    Visualization/out/*.html linguist-vendored
+    ```
