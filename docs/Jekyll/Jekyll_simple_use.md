@@ -2,11 +2,20 @@
 > 
 > 官方文档：:star: <https://jekyllrb.com/docs>
 
-
-
 Jekyll是一款静态博客生成器，也是github page支持的后台引擎
 
-### 安装（windows）
+### 安装
+
+官方文档：<https://jekyllrb.com/docs/installation/>
+
+需要安装
+
+1. ruby - 官方安装指南：<https://www.ruby-lang.org/en/documentation/installation/>
+2. RubyGems
+3. Bundler - <https://bundler.io/>
+4. Jekyll 
+
+#### # 安装（windows）
 
 1. 首先需要安装 ruby ：
 
@@ -150,6 +159,8 @@ Jekyll是一款静态博客生成器，也是github page支持的后台引擎
     ```bash
     gem install jekyll bundler 
     ```
+
+    >我们建议使用 Bundler 安装和运行 Jekyll。 Bundler 可管理 Ruby gem 依赖项，减少 Jekyll 构建错误和阻止环境相关的漏洞。 要安装 Bundler：
 
     ```bash
     C:\Users\lawsssscat>jekyll -v
@@ -569,6 +580,9 @@ Github Pages 并不是无限存储和无限流量的静态站点服务，一些�
 
 参考：[ssl 配置](../Network/ssl_config.md)
 
+#### # SEO
+
+The [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag) plugin is included by default (no need to run any special installation) to inject SEO and open graph metadata on docs pages. For information on how to configure SEO and open graph metadata visit [the Jekyll SEO Tag usage guide](https://jekyll.github.io/jekyll-seo-tag/usage/).
 
 
 > 
