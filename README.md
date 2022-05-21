@@ -68,15 +68,16 @@
 - [GitHub Actions 设置](./docs/Github/github_actions.md)
 - [Github API](./docs/Github/github_api.md)
 
-## 博客
+## 网站
 
-Jekyll 
+博客
 
- - [Jekyll 的基本使用](./docs/Jekyll/Jekyll_simple_use.md)
+- [Jekyll 的基本使用](./docs/Jekyll/Jekyll_simple_use.md) - 用以搭建静态博客
+- 【待看】[idoc](https://github.com/jaywcjlove/handbook/blob/master/package.json) - 文档生成器
 
-idoc
+统计
 
-- 【待看】<https://github.com/jaywcjlove/handbook/blob/master/package.json>
+- [Google Analytics](./docs/Google/Google_Analytics_simple_use.md) - 追踪、统计、分析
 
 ## CI/CD
 
