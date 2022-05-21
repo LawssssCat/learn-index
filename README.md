@@ -66,7 +66,7 @@
 - [Github profile 页面](./docs/Github/github_profile.md)
 - [Github Pages 设置](./docs/Github/github_pages.md) - 整合、自定义 Jekyll 
 - [GitHub Actions 设置](./docs/Github/github_actions.md)
-- [Github API](./docs/Github/github_api.md)
+- [Github API](./docs/Github/github_api.md) - repository、shields
 
 ## 网站
 
