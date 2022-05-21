@@ -1,24 +1,38 @@
-# 笔记/随笔 
-
-放置我的学习笔记。
-
-![GitHub repo size](https://img.shields.io/github/repo-size/LawssssCat/learn-index)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/LawssssCat/learn-index)
-![GitHub last commit (branch)](https://img.shields.io/github/last-commit/LawssssCat/learn-index)
-
-![GitHub deployments](https://img.shields.io/github/deployments/LawssssCat/learn-index/github-pages?label=github%20pages%20state)
-
-![GitHub Release Date](https://img.shields.io/github/downloads/LawssssCat/learn-index/total)
-![GitHub Release Date](https://img.shields.io/github/release-date/LawssssCat/learn-index)
-
-
-![GitHub Discussions](https://img.shields.io/github/discussions/Lawsssscat/learn-index)
-
-![GitHub issues](https://img.shields.io/github/issues-closed/LawssssCat/learn-index)
-![GitHub issues](https://img.shields.io/github/issues/LawssssCat/learn-index)
-
-![GitHub issues](https://img.shields.io/github/issues-pr-closed/LawssssCat/learn-index)
-![GitHub issues](https://img.shields.io/github/issues-pr/LawssssCat/learn-index)
+<p align="right">
+    <!--
+    <a href="https://github.com/LawssssCat/LawssssCat.github.io/master/LICENSE">
+        <img src="https://img.shields.io/github/license/LawssssCat/lawsssscat.github.io.svg" alt="LICENSE">
+    </a>
+    -->
+    <a href="https://LawssssCat.github.io">
+        <img src="https://img.shields.io/github/deployments/LawssssCat/learn-index/github-pages.svg?label=pages%20status&logo=github" alt="github pages status">
+    </a>
+</p>
+<br><br>
+<p align="center">
+    <h1 align="center">笔记/随笔</h1>
+    <p align="center">放置我的学习笔记</p>
+    <p align="center">
+        <img src="https://img.shields.io/github/repo-size/LawssssCat/learn-index" alt="GitHub repo size">
+        <img src="https://img.shields.io/github/commit-activity/m/LawssssCat/learn-index" alt="GitHub commit activity">
+        <img src="https://img.shields.io/github/last-commit/LawssssCat/learn-index" alt="GitHub last commit (branch)">
+    </p>
+    <p align="center">
+        <img src="https://img.shields.io/github/downloads/LawssssCat/learn-index/total" alt="GitHub Release Size">
+        <img src="https://img.shields.io/github/release-date/LawssssCat/learn-index" alt="GitHub Release Date">
+    </p>
+     <p align="center">
+        <img src="https://img.shields.io/github/discussions/Lawsssscat/learn-index" alt="GitHub Discussions">
+        <img src="https://img.shields.io/github/issues-closed/LawssssCat/learn-index" alt="GitHub issues close">
+        <img src="https://img.shields.io/github/issues/LawssssCat/learn-index" alt="GitHub issues open">
+        <img src="https://img.shields.io/github/issues-pr-closed/LawssssCat/learn-index" alt="Pull requests close">
+        <img src="https://img.shields.io/github/issues-pr/LawssssCat/learn-index" alt="Pull requests open">
+    </p>
+    <!--
+    <p align="center"><strong><a href="https://just-the-docs.github.io/just-the-docs/">See it in action!</a></strong></p>
+    -->
+    <br><br>
+</p>
 
 ## 学习笔记
 
