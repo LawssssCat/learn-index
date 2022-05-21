@@ -4,7 +4,7 @@
         <img src="https://img.shields.io/github/license/LawssssCat/lawsssscat.github.io.svg" alt="LICENSE">
     </a>
     -->
-    <a href="https://LawssssCat.github.io">
+    <a href="https://lawsssscat.github.io/learn-index">
         <img src="https://img.shields.io/github/deployments/LawssssCat/learn-index/github-pages.svg?label=pages%20status&logo=github" alt="github pages status">
     </a>
 </p>
