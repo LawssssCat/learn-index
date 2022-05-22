@@ -19,6 +19,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
       - name: Some build
+        run: echo date
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
