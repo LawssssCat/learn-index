@@ -1,1 +1,0 @@
-JSONPath Online Evaluator <https://jsonpath.com/>
