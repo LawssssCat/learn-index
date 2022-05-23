@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/less">
+        .triangleMixin(@_, @width: 20px, @color: red) {
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            border-width: @width;
+        }
+
+        .triangleMixin(T, @width, @color) {
+            border-style: solid dashed dashed dashed;
+            border-color: @color transparent transparent transparent;
+        }
+        .triangleMixin(B, @width, @color) {
+            border-style: dashed dashed solid dashed;
+            border-color: transparent transparent @color transparent;
+        }
+        
+        .triangleMixin(R, @width, @color) {
+            border-style: dashed solid dashed dashed;
+            border-color: transparent @color transparent transparent;
+        }
+        
+        .triangleMixin(L, @width, @color) {
+            border-style: dashed dashed dashed solid;
+            border-color: transparent transparent transparent @color;
+        } 
+
+        #wrap .triangle {
+            .triangleMixin(L, 10px, red)
+        }
+    </style>
+</head>
+<body>
+    <!-- 显示三角形 -->
+    <div id="wrap">
+        <div class="triangle"></div>
+    </div>
+</body>
+<script src="./less.min.js"></script>
+</html>
