@@ -39,10 +39,11 @@
 前端
 
 - 【未完】[learn-JavaScript](./docs/JavaScript/javascript_simple.md)
-- 【未完】[learn-nuxtjs](./docs/Nuxtjs/learn-nuxtjs.md)
+- 【未完】[learn-CSS](./docs/CSS/css_simple.md)
 - [learn-less](./docs/Less/learn-less.md)
 - [learn-sass](./docs/Sass/learn-sass.md)
 - [learn-ESLint](./docs/ESLint/ESLint_learn_note.md) - ESLint 学习笔记 
+- 【未完】[learn-nuxtjs](./docs/Nuxtjs/learn-nuxtjs.md)
 
 后端
 
