@@ -6,6 +6,8 @@ SASS（syntactically awesome stylesheet）
 
 **SASS的官方文档非常完整，建议一切查文档**
 
++ <https://www.sass.hk/docs/>
+
 ### less、sass、stylus 区别
 
 less 语法属于 css 风格
