@@ -1,0 +1,44 @@
+article ~ article {
+  border-top: 1px dashed #ccc; }
+article > section {
+  background: #eee; }
+article dl > dt {
+  color: #333; }
+article dl > dd {
+  color: #555; }
+nav + article {
+  margin-top: 0; }
+
+nav {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ccc;
+  border-right: none;
+  border-left: none; }
+
+a {
+  color: blue; }
+
+b {
+  color: red; }
+
+d b {
+  border: 0ch; }
+
+aa {
+  color: blue; }
+  aa:hover {
+    color: red; }
+
+bb {
+  color: blue; }
+  bb:hover {
+    color: red; }
+
+.dd, .cc {
+  border: 1px; }
+
+.cc {
+  background: red; }
+
+/*# sourceMappingURL=test.css.map */
