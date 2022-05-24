@@ -4,7 +4,7 @@
         <img src="https://img.shields.io/github/license/LawssssCat/lawsssscat.github.io.svg" alt="LICENSE">
     </a>
     -->
-    <a href="https://LawssssCat.github.io">
+    <a href="https://lawsssscat.github.io/learn-index">
         <img src="https://img.shields.io/github/deployments/LawssssCat/learn-index/github-pages.svg?label=pages%20status&logo=github" alt="github pages status">
     </a>
 </p>
@@ -69,7 +69,7 @@
 - [Github profile 页面](./docs/Github/github_profile.md)
 - [Github Pages 设置](./docs/Github/github_pages.md) - 整合、自定义 Jekyll 
 - [GitHub Actions 设置](./docs/Github/github_actions.md)
-- [Github API](./docs/Github/github_api.md)
+- [Github API](./docs/Github/github_api.md) - repository、shields
 
 ## 网站
 
