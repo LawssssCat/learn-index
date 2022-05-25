@@ -1,2 +1,6 @@
 *.md linguist-detectable=true
 *.md linguist-documentation=false
+
+*.js linguist-language=JavaScript
+*.json text linguist-language=JSON
+*.html linguist-language=HTML
