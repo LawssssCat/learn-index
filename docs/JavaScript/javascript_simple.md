@@ -159,3 +159,37 @@ var currentState = history.state;
 
 注意，页面第一次加载的时候，浏览器不会触发popstate事件。
 
+
+### 导入
+
+#### 浏览器 import、export 问题
+
+e.g. 
+
+```html
+<script type="module" src="a.js"></script>
+```
+
+```js
+// a.js
+import add from './b.js';
+console.log(add(1, 2)); // 3
+```
+
+```js
+// b.js
+export default function add(a, b) {
+  return a + b;
+}
+```
+
+注意两点
+
+1. `script` 标签上用 `type="module"`
+
+  否则报错：`Uncaught SyntaxError: Cannot use import statement outside a module`
+
+2. `default` 用 `default`
+
+  否则报错：`The requested module './b.js' does not provide an export named 'default' `
+

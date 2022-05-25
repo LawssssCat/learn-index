@@ -38,7 +38,7 @@
 
 前端
 
-- 【未完】[learn-JavaScript](./docs/JavaScript/javascript_simple.md)
+- 【未完】[learn-JavaScript](./docs/JavaScript/javascript_simple.md) -- es6
 - 【未完】[learn-CSS](./docs/CSS/css_simple.md)
 - 【未完】[learn-nodejs](./docs/Nodejs/learn-nodejs.md)
 - 【未完】[learn-typescript]()
