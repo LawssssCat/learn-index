@@ -1,5 +1,175 @@
 JSONPath Online Evaluator <https://jsonpath.com/>
 
+### chrome 的 session 能绑定数据大小
+
+测试2022年5月26日
+
+<img src="images/auto-javascript_simple-20220526153654.png" width=100%/>
+
+
+### 功能
+#### 双向绑定
+完整：<https://lawsssscat.blog.csdn.net/article/details/104190288>
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<input type="text" v-model='content'>
+<input type="text" v-model='title'>
+<input type="text" v-model='title'>
+<h4 v-bind='title'>这里也会更新</h4>
+
+
+<script>
+function View() {
+    let proxy = new Proxy({} , {
+        get(obj, property) {} ,
+        set(obj,property,value) { // 如果是严格模式，要返回true
+            document.querySelectorAll(`[v-model="${property}"]`)
+            .forEach(item=> {
+                item.value=value;
+            });
+            document.querySelectorAll(`[v-bind="${property}"]`)
+            .forEach(item => {
+                item.innerHTML = value ; 
+            })
+            // return true 能避免  'set' on proxy: trap returned falsish for property 'xxx' 异常
+        }
+    })
+    this.init = function() {
+        const els = document.querySelectorAll('[v-model]') ;
+        els.forEach(item => {
+            item.addEventListener('keyup' ,function() { // this 键入的 input
+                proxy[this.getAttribute('v-model')] = this.value ; 
+            });
+        });
+    };
+}
+new View().init() ;
+</script>
+</body>
+</html>
+
+```
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<input type="text" v-model='title'>
+<input type="text" v-model='title'>
+<h4 v-bind='title'>这里也会更新</h4>
+
+
+<script>
+function View() {
+  const els = document.querySelectorAll('[v-model]') ;
+  const vbs = document.querySelectorAll('[v-bind]') ;
+    let proxy = new Proxy({} , {
+        get(obj, property) {} ,
+        set(obj,property,value) {
+            console.log(value) ; 
+            els.forEach((el) => {
+              el.value=value;
+            })
+            vbs.forEach((vb) => {
+              vb.innerHTML=value;
+            })
+        }
+    })
+    this.init = function() {
+        els.forEach(item => {
+            item.addEventListener('keyup' ,function() { // this 键入的 input
+                proxy[this.getAttribute('v-model')] = this.value ; 
+            });
+        });
+    };
+}
+new View().init() ;
+</script>
+</body>
+</html>
+
+```
+####  表单验证
+
+
+完整：<https://lawsssscat.blog.csdn.net/article/details/104190288>
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .error{
+            border-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" validate rule='max:12,min:3'>
+    <input type="text" validate rule='max:3,isNumber'>
+
+<script>
+'use strict' ; 
+class Validate{
+    max(value , len){
+        return value.length <= len ; 
+    }
+    min(value,len) {
+        return value.length >= len ; 
+    }
+    isNumber(value) {
+        return /^\d+$/.test(value);
+    }
+}
+const validate = new Validate() ;
+function ProxyFactory(target) {
+    return new Proxy(target , {
+        get(target, key) {
+            return target[key] ;
+        },
+        set(target, key, el) { // el 传入的 this
+            const rules = el.getAttribute('rule');
+            let state = rules.split(',').every(rule => { //都是真 才真
+                const info = rule.split(':') ; 
+                return validate[info[0]](el.value,info[1] ) ;
+            })
+            el.classList[state?'remove':'add']('error') ; 
+            return true ; // 因为是严格模式，所以要返回 true
+        }
+    });
+}
+const proxy = ProxyFactory(document.querySelectorAll('[validate]'))
+proxy.forEach((item,i) => {
+    item.addEventListener("keyup",function() {
+        proxy[i] = this ;  //只是为了触发代理事件
+    })
+})
+</script>
+</body>
+</html>
+
+```
+
 ### history 对象
 
 参考：<https://www.jianshu.com/p/bbc2f9552c06>
