@@ -102,7 +102,11 @@ table-cell是display属性的值，可以给出类似于table标记的子元素�
 
 但我认为它看起来像“元素可以轻松并排排列”。
 
-### CSS em属性
+### CSS em属性、rem属性
+
+**em**
+
+单位em是相对于父元素的，如果父元素没有设置字体大小，那就会追溯到body（是body，不是html）
 
 在大多数浏览器上为html和body标签的默认字体大小为100%
 
@@ -140,6 +144,25 @@ p {
   margin-bottom: 1em; /*1em = 16px*/
 }
 ```
+
+**rem**
+
+ 在说rem,因为他是相对于跟元素（ html）,所以如果用rem，body里面写任何字体大小都没效果，只能写html在中，
+
+```css
+html {
+  font-size: 8px;
+}
+
+.box {
+  font-size: 32px;
+}
+
+.box_text {
+  font-size: 1rem; /*8px*/
+}
+```
+
 
 ### 案例
 
