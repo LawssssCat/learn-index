@@ -1,4 +1,9 @@
-> 官方文档：<https://docs.github.com/cn/actions/using-workflows>
+> 官方文档：
+> + index <https://docs.github.com/cn/actions/using-workflows>
+> + :star: <https://docs.github.com/en/actions/learn-github-actions/contexts>
+> + :star: <https://docs.github.com/cn/actions/learn-github-actions/environment-variables>
+> + secrets <https://docs.github.com/cn/actions/security-guides/encrypted-secrets>
+> + :star: expressions <https://docs.github.com/cn/actions/learn-github-actions/expressions>
 >
 
 GitHub Action 是 GitHub 于 2018 年 10 月推出的一个 CI\CD 服务（持续集成和持续部署）。简单明了的说 就是你可以给你的代码仓库部署一系列自动化脚本，在你进行了提交/合并分支等操作后，自动执行脚本。
