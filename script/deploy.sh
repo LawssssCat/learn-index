@@ -24,6 +24,7 @@ _baseurl=${_baseurl-""}
 
 _opt_dry_run=false
 _opt_clean=true
+_opt_bundle_path=""
 
 help() {
   echo "Build, test and then deploy the site"
@@ -54,43 +55,54 @@ init() {
     cat $_config >> $TMP_DIR/_config.yml
   fi
   cp docs $TMP_DIR/Docs -r
-  _baseurl="$(grep '^baseurl:' $TMP_DIR/_config.yml | sed "s/.*: *//;s/['\"]//g;s/#.*//")"
-  cd $TMP_DIR
+  _baseurl="$(grep '^baseurl:' $TMP_DIR/_config.yml | tail -1 | sed "s/.*: *//;s/['\"]//g;s/#.*//")"
 }
 
 build() {
+  # cache
+  if [[ -n $_opt_bundle_path ]]; then
+    echo set bundle config path $_opt_bundle_path
+    bundle config path $_opt_bundle_path
+  fi
+  bundle config gemfile $TMP_DIR/gemfile
+  # install
+  echo install dependencies
+  bundle install
   # build
-  bundle exec jekyll build -d "$SITE_DIR$_baseurl" --config "$_config" 
+  echo build
+  bundle exec jekyll build -s "$TMP_DIR" -d "$SITE_DIR/$_baseurl" --config "$TMP_DIR/$_config" 
 }
 
 run() {
   # run
-  bundle exec jekyll server -d "$SITE_DIR$_baseurl" --config "$_config" 
-}
-
-deploy() {
-  cd $RAW_DIR
-  mv $TMP_DIR/$SITE_DIR $SITE_DIR
+  bundle exec jekyll server -s "$TMP_DIR" -d "$SITE_DIR/$_baseurl" --config "$TMP_DIR/$_config" 
 }
 
 main() {
   if $_opt_clean; then
     clean
+    echo clean ok! 
     download
+    echo download ok!
   fi
   init
+  echo init ok!
   build
   echo build ok!
   if $_opt_dry_run; then
+    # build and run
     run
-    exit 0
   fi
-  deploy 
 }
 
 while (($#)); do
   opt="$1"
   case $opt in 
+  --bundle-path)
+    _opt_bundle_path=$2
+    shift
+    shift
+    ;;
   --no-clean)
     _opt_clean=false
     shift
