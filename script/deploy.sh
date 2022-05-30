@@ -25,6 +25,7 @@ _config=${_config-"_config.yml"}
 _opt_dry_run=false
 _opt_clean=true
 _opt_bundle_path=""
+_opt_port=""
 
 help() {
   echo "Build, test and then deploy the site"
@@ -34,8 +35,9 @@ help() {
   echo "   bash ./tools/deploy.sh [options]"
   echo
   echo "Options:"
-  echo '     -c, --config   "<config_a[,config_b[...]]>"    Specify config file(s)'
-  echo "     --dry-run                Build site and test, but not deploy"
+  echo '     --bundle-path   "path"    Specify bundle path for cache file(s) #see .github/workflows/jekyll-build-deploy.yml'
+  echo "     --no-clean                no delete the temp file and redownload theme src from github"
+  echo "     --dry-run                Build site and run"
   echo "     -h, --help               Print this information."
 }
 
@@ -63,9 +65,9 @@ build() {
   # cache
   if [[ -n $_opt_bundle_path ]]; then
     echo set bundle config path $_opt_bundle_path
-    bundle config path $_opt_bundle_path
+    bundle config --local path $_opt_bundle_path 
   fi
-  bundle config Gemfile $TMP_DIR/Gemfile
+  bundle config --local Gemfile $TMP_DIR/Gemfile
   # install
   echo install dependencies
   bundle install
@@ -76,7 +78,11 @@ build() {
 
 run() {
   # run
-  bundle exec jekyll server -s "$TMP_DIR" -d "$SITE_DIR" --config "$TMP_DIR/$_config" 
+  run_cmd="bundle exec jekyll server -s "$TMP_DIR" -d "$SITE_DIR" --config "$TMP_DIR/$_config
+  if [[ -n $_opt_port ]]; then
+    run_cmd=$run_cmd' --port '$_opt_port
+  fi
+  $run_cmd
 }
 
 main() {
@@ -101,6 +107,11 @@ while (($#)); do
   case $opt in 
   --bundle-path)
     _opt_bundle_path=$2
+    shift
+    shift
+    ;;
+  --port)
+    _opt_port=$2
     shift
     shift
     ;;
