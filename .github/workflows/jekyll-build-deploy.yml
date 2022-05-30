@@ -25,9 +25,9 @@ jobs:
         uses: actions/cache@v2
         with:
           path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          key: ${{ runner.os }}-gems-4-learn-index
           restore-keys: |
-            ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+            ${{ runner.os }}-gems-4-learn-index
       - name: Set up Ruby 📁
         uses: actions/setup-ruby@v1
         # with:
@@ -66,7 +66,7 @@ jobs:
           BRANCH: gh-pages
           FOLDER: _site
           # clean: true
-          clean-exclude: ${{ env.DEV_DEPLOY_PREFIX }}
+          # clean-exclude: ${{ env.DEV_DEPLOY_PREFIX }}
 
   # see https://docs.github.com/en/actions/learn-github-actions/contexts#example-printing-context-information-to-the-log
   dump_contexts_to_log:

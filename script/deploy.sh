@@ -14,13 +14,13 @@ RAW_DIR=$PWD
 THEME_GITHUB_REPO=${THEME_GITHUB_REPO-"https://github.com/LawssssCat/jekyll-theme-chirpy.git"}
 #THEME_GITHUB_REPO="git@github.com:LawssssCat/github-pages-deploy-action.git"
 
-THEME_GITHUB_BRANCH=${THEME_GITHUB_BRANCH-"master"}
+THEME_GITHUB_BRANCH=${THEME_GITHUB_BRANCH-"learn-index"}
 
 SITE_DIR=${SITE_DIR-"_site"}
 
 _config=${_config-"_config.yml"}
 
-_baseurl=${_baseurl-""}
+# _baseurl=${_baseurl-""}
 
 _opt_dry_run=false
 _opt_clean=true
@@ -56,7 +56,7 @@ init() {
     cat $_config >> $TMP_DIR/_config.yml
   fi
   cp docs $TMP_DIR/Docs -r
-  _baseurl="$(grep '^baseurl:' $TMP_DIR/_config.yml | tail -1 | sed "s/.*: *//;s/['\"]//g;s/#.*//")"
+  # _baseurl="$(grep '^baseurl:' $TMP_DIR/_config.yml | tail -1 | sed "s/.*: *//;s/['\"]//g;s/#.*//")"
 }
 
 build() {
@@ -71,12 +71,12 @@ build() {
   bundle install
   # build
   echo build
-  bundle exec jekyll build -s "$TMP_DIR" -d "$SITE_DIR/$_baseurl" --config "$TMP_DIR/$_config" 
+  bundle exec jekyll build -s "$TMP_DIR" -d "$SITE_DIR" --config "$TMP_DIR/$_config" 
 }
 
 run() {
   # run
-  bundle exec jekyll server -s "$TMP_DIR" -d "$SITE_DIR/$_baseurl" --config "$TMP_DIR/$_config" 
+  bundle exec jekyll server -s "$TMP_DIR" -d "$SITE_DIR" --config "$TMP_DIR/$_config" 
 }
 
 main() {
