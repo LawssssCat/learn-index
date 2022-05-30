@@ -1,0 +1,95 @@
+name: jekyll-build-publish
+
+# see https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-including-and-excluding-branches
+on:
+  # pull_request:
+  #   branches: [ main, dev ]
+  push:
+    branches: [ merge-chirpy ]
+    paths-ignore: 
+      - '!README.md'
+  workflow_dispatch:
+  workflow_call: # see https://docs.github.com/en/actions/using-workflows/reusing-workflows#using-inputs-and-secrets-in-a-reusable-workflow
+
+jobs:
+
+  build_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️ 
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # for posts's lastmod
+      # - name: Cache bundle install # cache. see https://docs.github.com/en/actions/using-workflows/caching-dependencies-to-speed-up-workflows
+      - name: Cache Ruby - Bundler # see https://github.com/actions/cache/blob/master/examples.md#ruby---bundler
+        uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+      - name: Set up Ruby 📁
+        uses: actions/setup-ruby@v1
+        # with:
+        #     ruby-version: 2.7
+      - name: Install dependencies 🔧
+        run: |
+          echo =============== env
+          env
+          echo =============== gem environment
+          gem environment
+          echo =============== gem list
+          gem list 
+          echo =============== gem install
+          gem install bundler
+          echo =============== gem bundle config list
+          bundle config list
+          echo =============== gem bundle list
+          # bundle list
+          echo =============== gem bundle config change see https://github.com/actions/cache/blob/master/examples.md#ruby---bundler
+          bundle config path vendor/bundle
+          bundle config list
+          echo =============== gem bundle list
+          # bundle list
+          echo =============== gem bundle install
+          bundle install --jobs 4 --retry 3
+          echo =============== gem bundle list
+          bundle list
+      - name: Build dev 📦
+        run: bash tools/deploy.sh
+        env:
+          SITE_DIR: _site
+      - name: Deploy pro 🚀 # see https://github.com/LawssssCat/github-pages-deploy-action
+        uses: LawssssCat/github-pages-deploy-action@v4.3.3
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: _site
+          # clean: true
+          clean-exclude: ${{ env.DEV_DEPLOY_PREFIX }}
+
+  # see https://docs.github.com/en/actions/learn-github-actions/contexts#example-printing-context-information-to-the-log
+  dump_contexts_to_log:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Dump GitHub context 🛎️
+          id: github_context_step
+          run: echo '${{ toJSON(github) }}'
+        - name: Dump env context
+          run: echo '${{ toJSON(env) }}'
+        - name: Dump job context
+          run: echo '${{ toJSON(job) }}'
+        - name: Dump steps context
+          run: echo '${{ toJSON(steps) }}'
+        - name: Dump runner context
+          run: echo '${{ toJSON(runner) }}'
+        - name: Dump strategy context
+          run: echo '${{ toJSON(strategy) }}'
+        - name: Dump matrix context
+          run: echo '${{ toJSON(matrix) }}'
+        - name: Dump secrets context
+          run: echo '${{ toJSON(secrets) }}'
+        - name: Dump needs context
+          run: echo '${{ toJSON(needs) }}'
+        - name: Dump inputs context
+          run: echo '${{ toJSON(inputs) }}'  
