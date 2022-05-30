@@ -56,7 +56,7 @@ jobs:
           # echo =============== gem bundle list
           # bundle list
       - name: Build dev 📦
-        run: bash tools/deploy.sh --bundle-path vendor/bundle
+        run: bash script/deploy.sh --bundle-path vendor/bundle
         env:
           SITE_DIR: _site
       - name: Deploy pro 🚀 # see https://github.com/LawssssCat/github-pages-deploy-action
