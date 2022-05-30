@@ -1,0 +1,24 @@
+.center {
+    background: hotpink;
+}
+
+.use01 {
+    // 调用混合
+    .center
+}
+
+.use02 {
+    .center
+}
+
+.style {
+    background: green;
+}
+
+h2:extend(.style) {
+    font-style: italic;
+}
+
+h3:extend(.style) {
+    font-style: normal;
+}

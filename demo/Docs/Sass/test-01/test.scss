@@ -1,0 +1,57 @@
+article {
+    ~ article { border-top: 1px dashed #ccc }
+    > section { background: #eee }
+    dl > {
+        dt { color: #333 }
+        dd { color: #555 }
+    }
+    nav + & { margin-top: 0 }
+}
+
+nav {
+    border: {
+        style: solid;
+        width: 1px;
+        color: #ccc;
+        right: none;
+        left: none;
+    }
+}
+
+$link-color: blue ;
+$link-color: pink !default;
+a {
+    color: $link-color;
+}
+$link-color: red ;
+b { 
+    color: $link-color;
+}
+
+d {
+    @import "./test-01";
+}
+
+@mixin link-color($normal, $hover:red, $baba: yellow) {
+    color: $normal;
+    &:hover {
+        color: $hover;
+    }
+}
+
+aa {
+    @include link-color(blue, red);
+}
+
+bb {
+    @include link-color(blue, $baba: red);
+}
+
+.dd {
+    border: 1px;
+}
+
+.cc {
+    @extend .dd;
+    background: red;
+}
