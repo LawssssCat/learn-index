@@ -23,6 +23,7 @@ _config=${_config-"_config.yml"}
 _baseurl=${_baseurl-""}
 
 _opt_dry_run=false
+_opt_clean=true
 
 help() {
   echo "Build, test and then deploy the site"
@@ -73,8 +74,10 @@ deploy() {
 }
 
 main() {
-  clean
-  download
+  if $_opt_clean; then
+    clean
+    download
+  fi
   init
   build
   echo build ok!
@@ -88,6 +91,10 @@ main() {
 while (($#)); do
   opt="$1"
   case $opt in 
+  --no-clean)
+    _opt_clean=false
+    shift
+    ;;
   --dry-run)
     # build & test, but not deploy
     _opt_dry_run=true
