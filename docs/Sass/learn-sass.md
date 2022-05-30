@@ -45,6 +45,10 @@ gem sources -a https://gems.ruby-china.com/
 gem sources -u
 ```
 
+```bash
+bundle config 'mirror.https://rubygems.org' 'https://ruby.taobao.org'
+```
+
 安装 sass
 
 ```bash
