@@ -48,6 +48,7 @@ clean() {
 
 download() {
   git clone  -b $THEME_GITHUB_BRANCH -v $THEME_GITHUB_REPO $TMP_DIR
+  ls -l $TMP_DIR
 }
 
 init() {
@@ -64,7 +65,7 @@ build() {
     echo set bundle config path $_opt_bundle_path
     bundle config path $_opt_bundle_path
   fi
-  bundle config gemfile $TMP_DIR/gemfile
+  bundle config Gemfile $TMP_DIR/Gemfile
   # install
   echo install dependencies
   bundle install
