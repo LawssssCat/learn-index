@@ -193,7 +193,9 @@ gem sources -u
 ```
 
 ```bash
-bundle config 'mirror.https://rubygems.org' 'https://ruby.taobao.org'
+bundle config 'mirror.https://rubygems.org' 'https://gems.ruby-china.com/'
+# 淘宝联不通，不知道是我网络问题还是不维护了。。懒得找原因
+# bundle config 'mirror.https://rubygems.org' 'https://ruby.taobao.org'
 ```
 
 
