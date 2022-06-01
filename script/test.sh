@@ -14,16 +14,23 @@ change_ruby_src() {
   bundle config 'mirror.https://rubygems.org' 'https://gems.ruby-china.com/'
 }
 
+_port=8888
+
 while (($#)); do
   opt="$1"
   case $opt in 
+  --just-run)
+    ./script/deploy.sh --just-run --port $_port
+    echo just-run
+    exit 0
+    ;;
   --run)
-    ./script/deploy.sh --no-clean --dry-run --bundle-path vendor/bundle --port 8888
+    ./script/deploy.sh --no-clean --dry-run --bundle-path vendor/bundle --port $_port
     exit 0
     ;;
   --clean-run)
     change_ruby_src
-    ./script/deploy.sh --dry-run --bundle-path vendor/bundle --port 8888
+    ./script/deploy.sh --dry-run --bundle-path vendor/bundle --port $_port
     exit 0
     ;;
   *) 

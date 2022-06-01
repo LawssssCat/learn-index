@@ -22,6 +22,7 @@ _config=${_config-"_config.yml"}
 
 # _baseurl=${_baseurl-""}
 
+_opt_just_run=false
 _opt_dry_run=false
 _opt_clean=true
 _opt_bundle_path=""
@@ -78,7 +79,7 @@ build() {
 
 run() {
   # run
-  run_cmd="bundle exec jekyll server -s "$TMP_DIR" -d "$SITE_DIR" --config "$TMP_DIR/$_config
+  run_cmd="bundle exec jekyll server -s "$TMP_DIR" -d "$SITE_DIR" -t --config "$TMP_DIR/$_config
   if [[ -n $_opt_port ]]; then
     run_cmd=$run_cmd' --port '$_opt_port
   fi
@@ -86,6 +87,11 @@ run() {
 }
 
 main() {
+  if $_opt_just_run; then
+    init
+    run
+    exit 0
+  fi
   if $_opt_clean; then
     clean
     echo clean ok! 
@@ -117,6 +123,10 @@ while (($#)); do
     ;;
   --no-clean)
     _opt_clean=false
+    shift
+    ;;
+  --just-run)
+    _opt_just_run=true
     shift
     ;;
   --dry-run)
