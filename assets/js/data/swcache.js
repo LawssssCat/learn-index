@@ -1,42 +1,42 @@
 const resource = [
 
   /* --- CSS --- */
-  '/learn-index/assets/css/style.css',
+  '/assets/css/style.css',
 
   /* --- PWA --- */
-  '/learn-index/app.js',
-  '/learn-index/sw.js',
+  '/app.js',
+  '/sw.js',
 
   /* --- HTML --- */
-  '/learn-index/index.html',
-  '/learn-index/404.html',
+  '/index.html',
+  '/404.html',
   
-    '/learn-index/categories/',
+    '/categories/',
   
-    '/learn-index/tags/',
+    '/tags/',
   
-    '/learn-index/archives/',
+    '/archives/',
   
-    '/learn-index/about/',
+    '/about/',
   
 
   /* --- Favicons & compressed JS --- */
   
   
-    '/learn-index/assets/img/favicons/android-chrome-192x192.png',
-    '/learn-index/assets/img/favicons/android-chrome-512x512.png',
-    '/learn-index/assets/img/favicons/apple-touch-icon.png',
-    '/learn-index/assets/img/favicons/favicon-16x16.png',
-    '/learn-index/assets/img/favicons/favicon-32x32.png',
-    '/learn-index/assets/img/favicons/favicon.ico',
-    '/learn-index/assets/img/favicons/mstile-150x150.png',
-    '/learn-index/assets/js/dist/categories.min.js',
-    '/learn-index/assets/js/dist/commons.min.js',
-    '/learn-index/assets/js/dist/home.min.js',
-    '/learn-index/assets/js/dist/misc.min.js',
-    '/learn-index/assets/js/dist/page.min.js',
-    '/learn-index/assets/js/dist/post.min.js',
-    '/learn-index/assets/js/dist/pvreport.min.js'
+    '/assets/img/favicons/android-chrome-192x192.png',
+    '/assets/img/favicons/android-chrome-512x512.png',
+    '/assets/img/favicons/apple-touch-icon.png',
+    '/assets/img/favicons/favicon-16x16.png',
+    '/assets/img/favicons/favicon-32x32.png',
+    '/assets/img/favicons/favicon.ico',
+    '/assets/img/favicons/mstile-150x150.png',
+    '/assets/js/dist/categories.min.js',
+    '/assets/js/dist/commons.min.js',
+    '/assets/js/dist/home.min.js',
+    '/assets/js/dist/misc.min.js',
+    '/assets/js/dist/page.min.js',
+    '/assets/js/dist/post.min.js',
+    '/assets/js/dist/pvreport.min.js'
 
 ];
 
