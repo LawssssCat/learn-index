@@ -45,6 +45,7 @@
 - [learn-less](./docs/Less/learn-less.md)
 - [learn-sass](./docs/Sass/learn-sass.md)
 - [learn-ESLint](./docs/ESLint/ESLint_learn_note.md) - ESLint 学习笔记 
+- [learn-gulpjs](https://www.gulpjs.com.cn/docs/getting-started/quick-start/)
 - 【未完】[learn-nuxtjs](./docs/Nuxtjs/learn-nuxtjs.md)
 
 后端
