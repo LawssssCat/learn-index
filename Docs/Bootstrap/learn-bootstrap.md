@@ -211,10 +211,17 @@ Bootstrap 提供了一套响应式、移动设备优先的流式栅格系统，�
 </tr>
 <tr>
   <td> 类前缀		</td>
+<<<<<<< HEAD
+  <td>.col-xs-	<br> （extra small）	</td>
+  <td>.col-sm-	<br> （small）	</td>
+  <td>.col-md-	<br> （medium）</td>
+  <td>.col-lg-	<br> （large） </td>
+=======
   <td>.col-xs-		</td>
   <td>.col-sm-		</td>
   <td>.col-md-	</td>
   <td>.col-lg-	</td>
+>>>>>>> 9e55f42d85e4f7a03aa67e6563aa2e5927156b23
 </tr>
 <tr>
   <td > 列（column）数	</td>
@@ -245,6 +252,57 @@ Bootstrap 提供了一套响应式、移动设备优先的流式栅格系统，�
 </tr>
 </table>
 
+>技巧
+>列嵌套中间加row可以消除margin
+>```html
+><div class='col-md-3'>
+>  <div class='row'>
+>    <div class='col-md-6'></div>
+>    <div class='col-md-6'></div>
+>  </div>
+></div>
+>```
+
+#### 列偏移
+
+<img src="images/auto-learn-bootstrap-20220603142229.png" width=100%/>
+
+`.col-md-offset-*`
+
+```html
+<style>
+
+</style>
+<div class='container'>
+    <div class='row'>
+      <div class='col-md-4'>左侧</div>
+      <div class='col-md-4 col-md-offset-4'>右侧</div>
+    </div>
+</div>
+```
+
+### 列排序
+
+```html
+<div class='container'>
+  <div class='row'>
+      <div class='col-md-4 col-lg-push-8'>左侧</div>
+      <div class='col-md-8 col-lg-pull-4'>右侧</div>
+  </div>
+</div>
+```
+
+### 响应式工具
+
+
+类名         | 超小 | 小屏 | 中屏 | 大屏
+--           |  -- | -- | -- | --
+`hidden-xs`  | 隐藏 | 显示 | 显示 | 显示 
+`hidden-xm`  | 显示 | 隐藏 | 显示 | 显示
+`hidden-md`  | 显示 | 显示 | 隐藏 | 显示
+`hidden-lg`  | 显示 | 显示 | 显示 | 隐藏
+
+相反， `visible-*`
 
 ### 组件
 
