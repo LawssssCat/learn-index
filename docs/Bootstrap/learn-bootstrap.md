@@ -211,10 +211,17 @@ Bootstrap 提供了一套响应式、移动设备优先的流式栅格系统，�
 </tr>
 <tr>
   <td> 类前缀		</td>
+<<<<<<< HEAD
   <td>.col-xs-	<br> （extra small）	</td>
   <td>.col-sm-	<br> （small）	</td>
   <td>.col-md-	<br> （medium）</td>
   <td>.col-lg-	<br> （large） </td>
+=======
+  <td>.col-xs-		</td>
+  <td>.col-sm-		</td>
+  <td>.col-md-	</td>
+  <td>.col-lg-	</td>
+>>>>>>> 9e55f42d85e4f7a03aa67e6563aa2e5927156b23
 </tr>
 <tr>
   <td > 列（column）数	</td>
