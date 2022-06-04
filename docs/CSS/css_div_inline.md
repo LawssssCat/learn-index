@@ -169,6 +169,8 @@ div 并排会出现下面问题
 <div style='clear: both;'></div><!--清楚浮动-->
 ```
 
+下面是一个页面的布局示例
+
 <style>
   #divhome * {
     box-sizing: border-box;
