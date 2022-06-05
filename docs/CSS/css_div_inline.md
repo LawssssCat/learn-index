@@ -168,3 +168,60 @@ div 并排会出现下面问题
 
 <div style='clear: both;'></div><!--清楚浮动-->
 ```
+
+
+例子：面包屑
+
+<style>
+  #exmp-breadcrumb01 .breadcrumb {
+    color: #000;
+    padding: 8px 16px;
+    background-color: #eee;
+  }
+  #exmp-breadcrumb01 .breadcrumb li {
+    display: inline;
+  }
+  #exmp-breadcrumb01 .breadcrumb li+li:before {
+    content: '/';
+    padding: 8px;
+  }
+  #exmp-breadcrumb01 .breadcrumb li a {
+    color: green;
+  }
+</style>
+<div id='exmp-breadcrumb01'> 
+  <ul class='breadcrumb'>
+    <li><a href='#'>Home</a></li>
+    <li><a href='#'>Books</a></li>
+    <li><a href='#'>Guide</a></li>
+    <li>How to ....</li>
+  </ul>
+</div>
+
+```html
+<style>
+  #exmp-breadcrumb01 .breadcrumb {
+    color: #000;
+    padding: 8px 16px;
+    background-color: #eee;
+  }
+  #exmp-breadcrumb01 .breadcrumb li {
+    display: inline;
+  }
+  #exmp-breadcrumb01 .breadcrumb li+li:before {
+    content: '/';
+    padding: 8px;
+  }
+  #exmp-breadcrumb01 .breadcrumb li a {
+    color: green;
+  }
+</style>
+<div id='exmp-breadcrumb01'> 
+  <ul class='breadcrumb'>
+    <li><a href='#'>Home</a></li>
+    <li><a href='#'>Books</a></li>
+    <li><a href='#'>Guide</a></li>
+    <li>How to ....</li>
+  </ul>
+</div>
+```

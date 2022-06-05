@@ -1,4 +1,38 @@
-<p>表单</p>
+按钮
+
+<style>
+  #exmp-btn01 .btn-group .mbtn{
+    /* text-decoration: none; */
+    /* text-align: center; */
+    /* display: inline-block; */
+    cursor:pointer;
+    font-size: 16px;
+    border: 1px solid green;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 15px 32px;
+    float: left;
+  }
+  #exmp-btn01 .btn-group .mbtn:not(:last-child) {
+    border-right: none; /* 阻止双边框 */
+  }
+  #exmp-btn01 .btn-group .mbtn:hover {
+    background-color: #3e8e41;
+  }
+</style>
+
+<div id='exmp-btn01'>
+  <div class='btn-group'>
+    <button class='mbtn'>Button</button>
+    <button class='mbtn'>Button</button>
+    <button class='mbtn'>Button</button>
+    <button class='mbtn'>Button</button>
+  </div>
+</div>
+
+<p style='clear:both'></p>
+
+表单
 
 <style>
   #exmp_form01 form{
