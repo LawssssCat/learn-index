@@ -102,7 +102,7 @@
     background-size: 1.5em;
     background-color: #fff;
     border-radius: 2em 0 0 2em;
-    transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease;
   }
   #exmp_form03 form .searchBox:hover {
     border: 1px solid #aaa;
